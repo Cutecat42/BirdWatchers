@@ -27,4 +27,8 @@ public class Bird {
     public int getObservationCount() {
         return this.observationCount;
     }
+    
+    public String getName() {
+        return this.name;
+    }
 }

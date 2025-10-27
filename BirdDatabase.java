@@ -21,4 +21,16 @@ public class BirdDatabase {
     public void addBird(Bird bird) {
         birds.add(bird);
     }
+    
+    public String all() {
+        for (Bird bird: birds) {
+            System.out.println(bird.getName());
+        }
+        return "Finished";
+    }
+    
+    @Override
+    public String toString() {
+        return birds.toString();
+    }
 }
