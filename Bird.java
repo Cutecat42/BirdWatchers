@@ -31,4 +31,8 @@ public class Bird {
     public String getName() {
         return this.name;
     }
+    
+    public String getLatinname() {
+        return this.latinName;
+    }
 }

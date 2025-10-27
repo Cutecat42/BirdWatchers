@@ -28,6 +28,10 @@ public class mainProgram {
                 addObservation(scan, database);
             }
             
+            if (command.equals("All")) {
+                getAll(database);
+            }
+            
             
         }
 
@@ -60,6 +64,13 @@ public class mainProgram {
             } else {
                 System.out.println("Not a bird!");
             }
+        }
+    }
+    
+    public static void getAll(BirdDatabase database) {
+        //database.all();
+        for (Bird bird: database.all()) {
+            System.out.println(bird.getName() + " (" + bird.getLatinname() + "): " +bird.getObservationCount() + " observations");
         }
     }
 

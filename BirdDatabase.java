@@ -23,9 +23,7 @@ public class BirdDatabase {
     }
     
     public ArrayList<Bird> all() {
-        for (Bird bird: birds) {
-            System.out.println(bird.getName());
-        }
+        
         return this.birds;
     }
     
