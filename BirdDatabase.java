@@ -22,11 +22,15 @@ public class BirdDatabase {
         birds.add(bird);
     }
     
-    public String all() {
+    public ArrayList<Bird> all() {
         for (Bird bird: birds) {
             System.out.println(bird.getName());
         }
-        return "Finished";
+        return this.birds;
+    }
+    
+    public void addObservation(Bird bird) {
+        bird.addObservation();
     }
     
     @Override

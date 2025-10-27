@@ -1,4 +1,5 @@
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class mainProgram {
@@ -23,6 +24,10 @@ public class mainProgram {
                 addBirdToDatabase(database, newBird(scan));
             }
             
+            if (command.equals("Observation")) {
+                addObservation(scan, database);
+            }
+            
             
         }
 
@@ -41,6 +46,21 @@ public class mainProgram {
     
     public static void addBirdToDatabase(BirdDatabase database, Bird bird) {
         database.addBird(bird);
+    }
+    
+    public static void addObservation(Scanner scanner, BirdDatabase database) {
+        System.out.println("Bird?");
+        String searchFor = scanner.nextLine();
+        
+        ArrayList<Bird> birds = new ArrayList<>(database.all());
+        
+        for (Bird bird: birds) {
+            if (bird.getName().contains(searchFor)) {
+                database.addObservation(bird);
+            } else {
+                System.out.println("Not a bird!");
+            }
+        }
     }
 
 }
